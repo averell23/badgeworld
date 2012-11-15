@@ -8,6 +8,9 @@ gem 'rails', '3.2.8'
 gem 'sqlite3'
 gem 'devise'
 gem 'slim'
+gem 'activeadmin'
+gem "meta_search",    '>= 1.1.0.pre'
+gem 'carrierwave'
 
 
 # Gems used only for assets and not required
@@ -23,6 +26,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :test, :development do
+  gem "rspec-rails", "~> 2.0"
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
