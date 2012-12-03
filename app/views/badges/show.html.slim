@@ -1,0 +1,22 @@
+.page-header
+  h1 
+    = @badge.name
+
+.row
+  .span4
+    img.img-polaroid src=@badge.badge_image.url
+  .span8
+    p.lead style="margin-left: 20px"
+      = @badge.description
+.row
+  .span12
+    p
+      = form_tag claim_badge_path(@badge), success: "alert('foobar')", remote: true, class: 'form-inline' do
+        input name="email" type="text" placeholder="your email"
+        | &nbsp;
+        button.btn-success type="submit" Claim
+      javascript:
+        $('.form-inline').bind('ajax:success', function(data, textStatus, jqXHR){
+          debugger;
+        });
+

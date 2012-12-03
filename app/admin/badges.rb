@@ -1,7 +1,7 @@
 ActiveAdmin.register Badge do
 
   form do |f|
-    f.inputs "New Badge" do
+    f.inputs "Badge Details" do
       f.input :name
       f.input :criteria
       f.input :description
@@ -10,6 +10,6 @@ ActiveAdmin.register Badge do
       f.input :badge_image, as: :file
     end
     f.buttons
-   end
+  end
   
 end

@@ -1,0 +1,9 @@
+.media
+  a.pull-left href=badge_path(badge)
+    img.media-object src=badge.badge_image.thumb.url
+  .media-body
+    h4.media-heading
+      a href=badge_path(badge)
+        = badge.name
+    p
+      = badge.description
