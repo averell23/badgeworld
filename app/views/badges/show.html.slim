@@ -1,3 +1,4 @@
+script src="http://beta.openbadges.org/issuer.js"
 .page-header
   h1 
     = @badge.name
@@ -11,12 +12,18 @@
 .row
   .span12
     p
-      = form_tag claim_badge_path(@badge), success: "alert('foobar')", remote: true, class: 'form-inline' do
+      = form_tag claim_badge_path(@badge), remote: true, class: 'form-inline' do
         input name="email" type="text" placeholder="your email"
         | &nbsp;
         button.btn-success type="submit" Claim
       javascript:
-        $('.form-inline').bind('ajax:success', function(data, textStatus, jqXHR){
-          debugger;
+        $('.form-inline').bind('ajax:success', function(data, assertions, jqXHR){
+          OpenBadges.issue(assertions, function(errors, successes) {
+            if(errors.length > 0) {
+              alert('A badge could not be added to your backpack. Sorry.');
+            } else {
+              alert('Congratulations to your new badge');
+            }
+          });
         });
 

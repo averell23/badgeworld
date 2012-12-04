@@ -12,7 +12,7 @@ class BadgesController < ApplicationController
   def claim
     earner = Earner.find_by_email!(params[:email])
     assertion = @badge.assertions.find_by_badge_id!(earner.id)
-    render json: assertion_url(assertion)
+    render json: [ assertion_url(assertion) ]
   end
 
   protected

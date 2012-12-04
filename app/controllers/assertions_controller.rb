@@ -16,7 +16,7 @@ class AssertionsController < ApplicationController
     {
       "recipient" => hashed_mail(assertion.earner.email),
       "salt" => salt,
-      "issued_on" => assertion.created_at.to_s,
+      "issued_on" => assertion.created_at.strftime("%Y-%m-%d"),
       "badge" => {
         "version" => "0.5.0",
         "name" => assertion.badge.name,
