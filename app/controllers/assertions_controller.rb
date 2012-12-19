@@ -24,7 +24,7 @@ class AssertionsController < ApplicationController
         "description" => assertion.badge.description,
         "criteria" => "/badges/html5-basic",
         "issuer" => {
-          "origin" => "http://badgeworld.org",
+          "origin" => root_url,
           "name" => "Badgeworld",
           "org" => "School of Badgecraft",
           "contact" => "admin@p2pu.org"

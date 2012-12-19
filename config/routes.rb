@@ -1,4 +1,7 @@
 Badgeworld::Application.routes.draw do
+
+  root :to => "badges#index"
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -66,6 +69,4 @@ Badgeworld::Application.routes.draw do
     post :claim, on: :member
   end
   resources :assertions, only: :show
-
-  root :to => "badges#index"
 end
