@@ -27,7 +27,7 @@ class AssertionsController < ApplicationController
           "origin" => root_url,
           "name" => "Badgeworld",
           "org" => "School of Badgecraft",
-          "contact" => "admin@p2pu.org"
+          "contact" => "badges@betterplace.org"
        }
       }
     }
