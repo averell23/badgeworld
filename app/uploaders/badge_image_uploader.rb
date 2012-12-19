@@ -17,10 +17,10 @@ class BadgeImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  process resize_to_fit: [256, 256]
+  process resize_to_fit: [256, 256], convert: 'png'
 
   version :thumb do
-    process resize_to_fit: [64, 64]
+    process resize_to_fit: [64, 64], convert: 'png'
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -54,5 +54,9 @@ class BadgeImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+
+  def filename
+    super.chomp(File.extname(super)) + '.png'
+  end
 
 end
