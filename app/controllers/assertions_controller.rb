@@ -25,8 +25,8 @@ class AssertionsController < ApplicationController
         "criteria" => "/badges/html5-basic",
         "issuer" => {
           "origin" => root_url,
-          "name" => "Badgeworld",
-          "org" => "School of Badgecraft",
+          "name" => "Furrycreatures Badge World",
+          "org" => "Little furry creatures rule your world",
           "contact" => "badges@betterplace.org"
        }
       }
