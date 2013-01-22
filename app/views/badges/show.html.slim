@@ -1,13 +1,15 @@
 .page-header
   h1 
     = @badge.name
+    | &nbsp;
+    small= @badge.description
 
 .row
   .span4
     img.img-polaroid src=@badge.badge_image.url
   .span8
     p.lead style="margin-left: 20px"
-      = @badge.description
+      = @badge.long_description
 .row
   .span12
     p
