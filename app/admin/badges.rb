@@ -9,6 +9,7 @@ ActiveAdmin.register Badge do
     f.inputs "Badge Image" do
       f.input :badge_image, as: :file
     end
+    # f.has_many :assertions
     f.buttons
   end
   

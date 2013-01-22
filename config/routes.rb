@@ -65,8 +65,9 @@ Badgeworld::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
-  resources :badges, only: [:index, :show] do
-    post :claim, on: :member
-  end
+  resources :badges, only: [:index, :show]
+
+  resource :activations, only: [:new, :create]
+
   resources :assertions, only: :show
 end

@@ -3,7 +3,12 @@ require 'digest'
 class AssertionsController < ApplicationController
 
   def show
-    render json: assertion_hash(Assertion.find(params[:id]))
+    @assertion = Assertion.find(params[:id])
+    if(@assertion.activated?)
+      render json: assertion_hash(Assertion.find(params[:id]))
+    else
+      redirect_to new_assertion_activation_path(@assertion)
+    end
   end
 
   protected
