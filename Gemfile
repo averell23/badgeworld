@@ -14,6 +14,11 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 
+group :development do
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
