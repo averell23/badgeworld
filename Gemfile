@@ -5,7 +5,8 @@ gem 'rails', '~>4.0.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+gem 'mysql2', group: :production
+gem 'sqlite3', group: [ :development, :test ]
 gem 'devise'
 gem 'slim'
 gem 'activeadmin', github: 'gregbell/active_admin'

@@ -1,7 +1,5 @@
 class Assertion < ActiveRecord::Base
 
-  attr_accessible :earner, :badge, :badge_id, :earner, :earner_id, :activation_code
-
   belongs_to :earner
   belongs_to :badge
 

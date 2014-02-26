@@ -125,7 +125,7 @@ Devise.setup do |config|
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
   # config.timeout_in = 30.minutes
-  
+
   # If true, expires auth token on session timeout.
   # config.expire_auth_token_on_timeout = false
 
@@ -201,6 +201,8 @@ Devise.setup do |config|
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
+
+  config.secret_key = '59e821099619da891e1f3e2efe1d32ebb4f2538cee13f0e0c0169c01bcf17be557bd96f7c119825e38146552e00b8d933426048adae8e8a4df278d6d9e167b1e'
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
